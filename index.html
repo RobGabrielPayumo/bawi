@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For My Valentine</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Arial&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Times New Roman", Times, serif;
+        margin: 0;
+        padding: 0;
+        background: #fff8fb; /* soft pink background */
+        color: #333;
+        line-height: 1.6;
+      }
+
+      h1,
+      h2,
+      p {
+        font-family: Montserrat;
+        margin: 0 0 15px 0;
+      }
+
+      #greeting {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        text-align: center;
+        padding: 20px;
+      }
+
+      #greeting h1 {
+        font-family: Story of Love; /* distinct font */
+        font-size: 2rem;
+        color: #ff66b3; /* soft pink */
+        margin-bottom: 20px;
+      }
+
+      #greeting p {
+        font-family: Montserrat;
+        font-size: 1rem;
+        max-width: 90%;
+        margin-bottom: 15px;
+      }
+
+      button {
+        padding: 14px 28px;
+        margin: 10px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      button:active {
+        transform: scale(0.95);
+      }
+
+      #yesBtn {
+        background: #ff66b3;
+        color: white;
+      }
+      #yesBtn:hover {
+        background: #ff4da6;
+      }
+
+      #notYetBtn {
+        background: #ccc;
+        color: #333;
+      }
+      #notYetBtn:hover {
+        background: #bbb;
+      }
+
+      #notYetMsg {
+        display: none;
+        margin-top: 20px;
+        font-size: 1rem;
+        color: #666;
+        max-width: 90%;
+        text-align: center;
+      }
+
+      #mainContent {
+        display: none;
+        padding: 30px 15px;
+        max-width: 700px;
+        margin: 0 auto;
+        position: relative;
+      }
+
+      #mainContent::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("bg.jpg") center/cover no-repeat;
+        opacity: 0.15; /* adjust for readability */
+        z-index: -1;
+      }
+
+      section {
+        margin-bottom: 50px;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 1s ease;
+      }
+
+      section.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        color: #fa2a55;
+        font-family: Georgia, serif;
+      }
+
+      section p {
+        font-size: 1rem;
+        margin-bottom: 12px;
+        color: #333;
+      }
+
+      #finalLine {
+        text-align: center;
+        font-size: 1.3rem;
+        margin-top: 30px;
+        color: #d147a3;
+        font-family: Georgia, serif;
+      }
+
+      @media (min-width: 600px) {
+        #greeting h1 {
+          font-size: 2.5rem;
+        }
+        #greeting p {
+          font-size: 1.2rem;
+        }
+        section h2 {
+          font-size: 2rem;
+        }
+        section p {
+          font-size: 1.1rem;
+        }
+        #finalLine {
+          font-size: 1.8rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <audio id="bgMusic" src="hays.mp3" loop></audio>
+    <div id="greeting">
+      <h1>
+        Hello my Valentine, my partner, my beloved — and most especially, my
+        girlfriend.
+      </h1>
+      <p>
+        I hope this website is worth your time. I didn’t build this to
+        compensate for what I did, or what I failed to do, but to give you
+        reassurance — that you are heard, that you are seen, and that I truly
+        know a side of you that no one else in this world gets to see but me.
+      </p>
+      <p>
+        I’m sorry for forgetting something that mattered to you. I see now how
+        much it hurt, and I never wanted to make you feel unknown or overlooked.
+      </p>
+      <p>Would you allow me to make it up to you?</p>
+      <div>
+        <button id="yesBtn">Yes</button>
+        <button id="notYetBtn">Not Yet</button>
+      </div>
+      <div id="notYetMsg">
+        It’s okay and I understand that you need time. I’ll still be here when
+        you’re ready.
+      </div>
+    </div>
+
+    <div id="mainContent">
+      <section style="text-align: center">
+        <h2 style="font-family: Calibri; font-size: 2rem; color: #ff66b3">
+          BEFORE ANYTHING ELSE
+        </h2>
+        <p>
+          I want to start this by saying that this isn’t meant to overwhelm you,
+          impress you, or pressure you into forgiving me. I’m doing this because
+          I needed to pause and truly reflect on you — not just as my
+          girlfriend, but as a person I care for and cherish deeply. I’ve
+          realized that knowing someone isn’t about remembering every detail
+          perfectly. It’s about paying attention, listening, and choosing to
+          keep learning. I failed to do that in a moment that mattered, and I’m
+          truly sorry. I’ve come to understand that loving someone means making
+          them feel seen and known. That realization is the exact reason this
+          website exists. It’s here to reassure you that you are acknowledged,
+          that you matter, and that you are loved. Everything here is written
+          with honesty. Some things I know about you with certainty. Some things
+          I’m still learning. And some things I hope to understand better — from
+          you. You don’t have to read everything all at once. Take your time.
+          This space isn’t going anywhere.
+        </p>
+      </section>
+
+      <section style="text-align: center">
+        <h2 style="font-family: Calibri; font-size: 2rem; color: #ff66b3">
+          WHAT I KNOW ABOUT YOU
+        </h2>
+        <p>
+          These are the things that I’ve noticed and have known about you
+          throughout the course of our relationship, the things that make you,
+          you. I may not know everything, but I want to show you that I see you,
+          that I remember, that I care.
+        </p>
+        <p>
+          You are Angel Ahlia Chantengco, a beautiful, pretty, strong,
+          independent, and adventurous young woman born on February 20, 2008.
+          You approach life with a sense of courage and excitement, with a
+          profound love for friends and especially your family. You love your
+          mommy, ma, tang, tito, tita, and especially Jirroy. You and your mommy
+          are a best friend duo, the one at which you can open up to whenever
+          you need a shoulder. Your ma and tang are the ones who raised you,
+          took care of you, and cherished you while your mommy was away. You
+          have your titos from the very moment you were born, with Tito Gene
+          sharing a sibling bond with you, with both of you having similar
+          characteristics like being a Swiftie and a fondness for travelling.
+        </p>
+        <p>
+          You’re a cat lover, with Tofu and Momo being one of your most beloved
+          pets in your life. You expressed how much they meant to you, and how
+          much they’ve brought you joy and laughter throughout their lives. You
+          introduced them to me even before we confessed to each other, often
+          sending me selfies with them. I still remember the very first selfie
+          that you gave me, the one at which had a filter of gold mask while I
+          sent a selfie back with a filter of Iron Man. One of your hobbies
+          before I even met you was baking, even giving me a corndog wrapped in
+          plastic as a souvenir from the first few times I went to your house.
+          You insisted that I take it and eat it or else you would be mad and
+          kick me out of your house indefinitely, which I found cute at the
+          time.
+        </p>
+        <p>
+          Your favorite color is pink, which is obvious, but was originally blue
+          – sky blue to be exact. You talked about how one point, your Lola Baby
+          teased you at why sky blue was your favorite color when it was meant
+          to be for boys, but you being you, you stood up for yourself.
+        </p>
+        <p>
+          One of your favorite things to eat is baked sushi, a staple of the
+          many things you loved to make. Apart from that, you grow a fondness
+          towards foods such as xiaolongbao, so much so that you even went to
+          your Tito at SM back then just to eat with them because they had your
+          favorite in the restaurant they were in. You love foods like ramen,
+          sushi, especially the one in Makimura, Volcano Roll, often talking
+          about how you want to buy a platter (I also know that this is the same
+          sushi you got when you finally said yes to me being your boyfriend on
+          28th of March last year). Moreover, you love pizza and chicken,
+          especially 24 Chicken with Jack Daniels and Snow Cheese being the
+          first things we’ve tried on our first date at Angeles. You love
+          shawarma, often ranking Kamir as the best you’ve tasted by far,
+          followed with passport food. You love Ilao Ilao, Ilocos Empenada and
+          bibingka, specifically the one in Angeles, and one of the recent
+          turnarounds, Takoyaki. You expressed your hatred towards Takoyaki
+          before, but eventually you’ve grown to love the delicacies yourself.
+          You love onigiri and musubi too, to the point that you made Pastigiri.
+          One of the many moments where your creativity and love for food shone
+          into the spotlight, with Pastigiri even gaining a liking from my
+          parents themselves. I remembered how people were still trying to even
+          order even though it was already out of stocked. I remember how we
+          shared a piece together because you still wanted to eat some, but all
+          of them were already taken.
+        </p>
+        <p>
+          You don’t drink soft drinks, which I admire the most about you. So
+          much so that I’ve been following your principle too. But whenever you
+          do decide to indulge in drinks, you favor matcha above all others. I
+          actually didn’t like matcha before, but because of you, I’ve grown to
+          enjoy it myself. I still remember the video you sent me from your trip
+          to Baguio with Tito Gene — that three-day, two-night trip your mommy
+          planned for you. In it, you were sipping matcha tea, a little left on
+          your lips, and I couldn’t help but smile seeing how much you enjoyed
+          it and how silly you looked (in a good way). I remember the journey
+          there too — taking the bus from SMC, arriving hungry, complaining to
+          me while I was still asleep, and deciding to grab a burger from McDo
+          before continuing your adventure.
+        </p>
+        <p>
+          You love songs, you don't usually listen to songs wholeheartedly, but
+          you tell me that you still like to listen to music once in a while.
+          You love NIKI, as you told me her songs have gotten you through rough
+          times, with Ocean and Engines being your anthem at the time we were in
+          a bad argument and misunderstanding. You don't just love her music,
+          but you also love the artist as well, even your Tito bought you a
+          hoodie during her tour, the tour at which you told me that you wanted
+          to go but couldn't because of school.
+        </p>
+        <p>
+          You play games, but not that much anymore like before. You played ML,
+          the same game you played during the pandemic with your friends before
+          eventually moving to CODM. You loved Hanabi, the same as much as how
+          you loved playing CODM with your friends. The same game we eventually
+          crossed paths with, I still remember how you named your Holger my
+          name. You lost a bet while we were playing with our friends, and at
+          the time I already had feelings for you, which is why I made you name
+          it after me. You like Roblox too, with 99 Nights being one of your go
+          to games back then to play with me. Some games you also played were
+          Good Coffee, Great Coffee and the Airplane Chef you played a bit, the
+          one photo where you tried the game a random night. But one things for
+          sure, you play games with me because you want to spend time with me,
+          and that is one of the sweetest things you’ve done for me.
+        </p>
+      </section>
+
+      <section style="text-align: center">
+        <h2 style="font-family: Calibri; font-size: 2rem; color: #ff66b3">
+          THE THINGS ONLY I GET TO SEE
+        </h2>
+        <p>
+          All of what I said are merely just the basics of Angel Ahlia
+          Chantengco. Stuff that other people know about, things that they may
+          also notice, or traits that they also see.
+        </p>
+        <p>
+          Yes some may know that you hate spicy foods, but they wouldn’t know
+          how you feel disgusted whenever you even see a sight of a hot sauce in
+          front of you, let alone when it’s mixed with other things. You hate
+          seeing spice as much as you hate seeing pickles in a burger. The green
+          guys who you always give me whenever we go out for burgers, the same
+          way as you leave out the crust of a pizza. They wouldn’t really know
+          that the ever courageous Angel would be scared of washing dishes,
+          especially if the dishes include vinegar or soy sauce, which makes you
+          even less than willing to wash them. They might not know how you
+          behave when you’re on the road, how frightened you get when a car is
+          heading straight at you. They most certainly would never hear you,
+          Moira, sing spontaneously in your bathroom at night while doing your
+          skincare. The skincare that you do every single night, the exact thing
+          that doesn’t let you sleep not until you finally have rinsed and
+          washed your face. They won’t get the same chance that I have to spend
+          late night walks with you, the kind that makes your heart ache of
+          happiness from the moment that we share a night under the moonlight.
+        </p>
+        <p>
+          They don’t see a side of you that I do, the side that you only share
+          to the closest around you. They will never see you sleep on their
+          shoulder at a jeepney going home nor sleep in general, while you drool
+          away your thoughts. I always laugh, not because I’m making fun of you,
+          but because of how innocent you look whenever you sleep. It’s hard to
+          think that they would also know that between 1PM to 4PM and past 11PM,
+          your messages are a ticking time bomb. One moment you’re replying, but
+          once I notice that “Active 10 mins ago” mark below your profile, I
+          know sleep has already taken you away. I know how much you move around
+          whenever you sleep, how sometimes you speak when sleeping, even though
+          you wouldn’t admit it, but I’ve already seen it on our sleep calls. I
+          know that you love to be lullabied to sleep, to be sang a song until
+          you finally sleep the night away.
+        </p>
+        <p>
+          I notice how food makes you happy, at in one instant, the grumpy, mad,
+          and curled eyebrows you have can change into a happy dance that you
+          make whenever you’re served your favorite meals. I love how intimate
+          you are and how you always reach for a camera the second a moment is
+          happening. The way you want to capture every glimpse of a moment to
+          store it as a memory to look back on. I know how you crave to be taken
+          candid pictures yourself, and how you want me to do the same too. I
+          know how want surprises too, from surprise visits to surprise food,
+          that cheer you up after a tiring and long day. I remember how Dos,
+          Panpan, Rose made you feel the moment I gave them to you, how your
+          eyes brighten up whenever you receive a handwritten letter. The kind
+          of gifts that take effort to make, the ones that make you happy and
+          appreciative off.
+        </p>
+        <p>
+          These things that I’ve mentioned are not memorized, but rather the
+          small details and tendencies I’ve noticed as because I was paying
+          attention. And I still want to keep paying attention, better and more
+          observant than before.
+        </p>
+      </section>
+
+      <section style="text-align: center">
+        <h2 style="font-family: Calibri; font-size: 2rem; color: #ff66b3">
+          SOFT SIDE
+        </h2>
+        <p>
+          After three years of being together, I’ve grown to deeply appreciate
+          the side of you that not everyone gets to see. While others see the
+          independent and strong Ahlia, I get to see the soft and vulnerable
+          side — the one you only give access to those you truly love.
+        </p>
+        <p>
+          I know how deeply you love someone, even when it reaches the point
+          where you end up hurting too. I admire how you love your family
+          wholeheartedly — how you take care of them, cherish the moments you
+          spend together, and genuinely look out for their well-being.
+        </p>
+        <p>
+          I’ve seen the side of you that wanted to give up so badly, yet still
+          refused to surrender. Whether it was a problem in our relationship,
+          academics, or family, you always found the strength to push through.
+          I’ve seen you cry multiple times — and at times, I know I was the
+          reason — but what stays with me is how you rebuild yourself and come
+          back stronger every time.
+        </p>
+        <p>
+          I see how much you push yourself to grow, to improve, and to reach
+          your dreams. I know how dedicated you are to your academic excellence,
+          not only for your mommy, but also for yourself.
+        </p>
+        <p>
+          I admire how you always stand your ground, especially when you know
+          you are right. You may be direct at times, but you have a strong moral
+          compass that you stay true to. You make sure your voice is heard, and
+          you never allow anyone to invalidate your opinions.
+        </p>
+        <p>
+          You are brave, strong, resilient, and most of all, loving and caring.
+          These are the traits that made me fall for you in the first place.
+          Beyond your humor, beauty, and intelligence, it’s the way you protect
+          the people you love — and how far you’re willing to go for them — that
+          truly sets you apart.
+        </p>
+      </section>
+
+      <section style="text-align: center">
+        <h2 style="font-family: Calibri; font-size: 2rem; color: #ff66b3">
+          HOW YOU LOVE
+        </h2>
+        <p>
+          The way you love is genuine, grand, and deeply felt. You don’t love
+          loudly for attention, you love through actions, consistency, and care.
+        </p>
+        <p>
+          You love by remembering small things. By putting in effort such as
+          setting up dates. By choosing to stay, even when things get difficult.
+          You give your time, your energy, and your presence to the people who
+          matter to you.
+        </p>
+        <p>
+          You love through effort. Through patience. Through showing up in ways
+          that aren’t always seen, but are always felt. When you care about
+          someone, you do everything you can to make them feel safe, supported,
+          and valued.
+        </p>
+        <p>
+          Whenever you love someone, you love deeply, sometimes even at the cost
+          of yourself. And while that shows how big your heart is, it’s also
+          something I’ve learned to respect and be more mindful of. You deserve
+          a love that protects you as much as you protect others. The kind of
+          love that you deserve.
+        </p>
+        <p>
+          You don’t give your heart easily, but when you do, it’s sincere and
+          profound. Your love is honest. It’s loyal. It’s direct. And it’s real.
+        </p>
+        <p>
+          Being loved by you is not about grand gestures, it’s about knowing
+          your loved one, and showing genuine care for who they are. And that is
+          something I will never take lightly or for granted ever again.
+        </p>
+      </section>
+
+      <section style="text-align: center">
+        <h2 style="font-family: Calibri; font-size: 2rem; color: #ff66b3">
+          WHAT I PROMISE
+        </h2>
+        <p>
+          I’ve said some of these words before, even long before all of this
+          happened. But now, understanding what’s truly at stake, I want to say
+          them with more awareness — and more responsibility.
+        </p>
+        <p>
+          I’ve realized how much we’ve both changed, how time and distance have
+          made it harder for us to address things properly, and how much we owe
+          each other understanding and accountability. I hear everything you’ve
+          told me, and I respect the plans and boundaries you’ve shared about
+          your future.
+        </p>
+        <p>
+          I know I’ve made mistakes. I know I’ve caused pain. And instead of
+          trying to erase that, I want to take responsibility for it and do
+          better — consistently, not just in words.
+        </p>
+        <p>
+          You’re right that patterns can repeat if nothing truly changes. That’s
+          something I’ve reflected on deeply. And if I’m given the chance, I
+          don’t want to repeat the same cycle — I want to rebuild with
+          intention, patience, and growth.
+        </p>
+        <p>
+          I promise to never let you feel unseen or unknown again. To listen
+          more attentively. To be more present. To remember that loving you
+          means paying attention even when life gets busy or difficult.
+        </p>
+        <p>
+          I want to be someone who brings you peace, not stress. Someone who
+          supports you and comforts you through exhaustion, anxiety, and
+          pressure — not adds to it. I don’t promise a relationship without
+          disagreements, but I do promise one built on respect, communication,
+          and effort.
+        </p>
+        <p>
+          I still believe in a future where we love each other better than
+          before — not perfectly, but honestly. A future where we both feel
+          secure, valued, and understood.
+        </p>
+      </section>
+
+      <section id="finalLine">
+        <p style="font-family: Story of Love; font-size: 2rem; color: #ff66b3">
+          I love you Ahlia, always, in the ways that matter most.
+        </p>
+      </section>
+    </div>
+
+    <script>
+      window.onload = function () {
+        const yesBtn = document.getElementById("yesBtn");
+        const bgMusic = document.getElementById("bgMusic");
+        const notYetBtn = document.getElementById("notYetBtn");
+        const mainContent = document.getElementById("mainContent");
+        const notYetMsg = document.getElementById("notYetMsg");
+
+        yesBtn.addEventListener("click", () => {
+          mainContent.style.display = "block";
+          document.getElementById("greeting").style.display = "none";
+
+          const bgMusic = document.getElementById("bgMusic");
+          bgMusic.play().catch((error) => {
+            console.log("Music blocked until user interaction.");
+          });
+
+          const sections = document.querySelectorAll("section");
+          sections.forEach((section, index) => {
+            setTimeout(() => {
+              section.classList.add("visible");
+            }, index * 300);
+          });
+        });
+
+        notYetBtn.addEventListener("click", () => {
+          notYetMsg.style.display = "block";
+        });
+      };
+    </script>
+  </body>
+</html>
